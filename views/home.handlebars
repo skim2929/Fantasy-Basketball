@@ -1,0 +1,67 @@
+<article>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        {{#if alert}}
+          <div class="alert alert-warning text alert-text" role="alert">
+            {{alert}}
+          </div>
+        {{/if}}
+        {{#if session.user.username}}
+          <h2 class="text">Welcome, {{session.user.username}}</h2>
+          <a class="btn btn-primary text" href="/profile">My Profile</a>
+          <a class="btn btn-primary text" href="/logout">Logout</a>
+        {{else}}
+          <h2 class="text subheadings">Login</h2>
+          <form action="/login" method="POST" id="login-form">
+            <div class="mb-2">
+              <label for="email" class="form-label text">Enter your email:</label>
+              <input
+                type="text"
+                name="email"
+                id="email"
+                placeholder="Email"
+                class="form-control"
+              />
+            </div>
+            <div class="mb-2">
+              <label for="password" class="form-label text">Enter a password:</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Password"
+                class="form-control"
+              />
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary mb-2 text"
+            >Submit</button>
+            <a class="btn btn-info text mb-2" href="/signup">"Need to register?
+              Click here to sign-up"</a>
+          </form>
+
+        {{/if}}
+      </div>
+      <div class="col">
+        <h2 class="text subheadings">Top Latest News Articles</h2>
+        <ul id="home-articles" hidden></ul>
+      </div>
+      <div class="col">
+        <h2 class="text subheadings">Top Active Sports</h2>
+        <ul id="home-sports" hidden></ul>
+      </div>
+    </div>
+  </div>
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+  ></script>
+  <script src="/public/js/home.js"></script>
+  <div class="footer">
+    <h4>About Us</h4>
+    <p>Authors: Patrick Cullinane, Jacob Gerega, Sean Kim</p>
+  </div>
+</article>

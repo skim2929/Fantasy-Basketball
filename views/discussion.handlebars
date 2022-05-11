@@ -1,0 +1,48 @@
+<article>
+  <div id="discussion-div">
+    <h2>{{title}}</h2>
+    {{#if posts}}
+      <ul id="discussion-post-list">
+        {{#each posts}}
+          <li>
+            {{#if ownerPfp}}
+              <img
+                alt="Profile Picture"
+                class="profile-img"
+                src="{{ownerPfp}}"
+              />
+            {{else}}
+              <img
+                class="profile-img"
+                alt="Profile Picture"
+                src="/public/img/no_image.jpeg"
+              />
+            {{/if}}
+            <p>Author: {{ownerUsn}}</p>
+            <p>{{content}}</p>
+            <p>{{date}}</p>
+          </li>
+        {{/each}}
+      </ul>
+    {{else}}
+      <h2>No posts yet! Go ahead and make one!</h2>
+    {{/if}}
+    {{#if session.user.username}}
+      <button id="discussion-cp-button">Create New Post</button>
+    {{/if}}
+  </div>
+  <div id="discussion-cp-div" hidden>
+    <form id="newpost-form">
+      <label for="content">Post content:</label>
+      <input type="text" name="content" id="content" />
+      <button type="submit">Submit</button>
+    </form>
+    <button id="discussion-cp-cancel-button">Cancel</button>
+  </div>
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+  ></script>
+  <script src="/public/js/discussion.js"></script>
+</article>

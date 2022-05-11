@@ -1,0 +1,31 @@
+<article>
+  <div class="container">
+    <h2 class="header-titles">{{player.displayName}}</h2>
+    <div class="row">
+      <div class="col">
+        {{#if player.headshot}}
+          <img
+            id="img"
+            alt="{{player.playerName}}"
+            src="{{player.headshot.href}}"
+          />
+        {{else}}
+          <img id="img" src="/public/img/no_image.jpeg" />
+        {{/if}}
+      </div>
+      <div class="col">
+        <ul>
+          <li>Weight: {{player.displayWeight}}</li>
+          <li>Height: {{player.displayHeight}}</li>
+          <li>Age: {{player.age}}</li>
+          <li>Career Length: {{player.experience.years}}</li>
+          <li>College: {{college}}</li>
+          <li>Birthplace: {{player.birthPlace.city}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <a href="/playersearch" class="text link">Make another search</a>
+    </div>
+  </div>
+</article>

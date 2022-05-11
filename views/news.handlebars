@@ -1,0 +1,44 @@
+<article>
+  <h2 class="header-titles">Latest News</h2>
+  <div class="container">
+    <h3>Latest NFL News</h3>
+    {{#if nflArticles}}
+      <ul>
+        {{#each nflArticles}}
+          <li><a
+              href="{{links.web.href}}"
+              target="_blank"
+              class="text link"
+            >{{headline}}</a></li>
+        {{/each}}
+      </ul>
+    {{/if}}
+
+    <h3>Latest College Football News</h3>
+    {{#if collegeArticles}}
+      <ul>
+        {{#each collegeArticles}}
+          <li><a
+              href="{{links.web.href}}"
+              target="_blank"
+              class="text link"
+            >{{headline}}</a></li>
+        {{/each}}
+      </ul>
+    {{/if}}
+
+    <h3>Latest Baseball News</h3>
+    {{#if baseballArticles}}
+      <ul>
+        {{#each baseballArticles}}
+          <li><a
+              href="{{links.web.href}}"
+              target="_blank"
+              class="text link"
+            >{{headline}}</a></li>
+        {{/each}}
+      </ul>
+    {{/if}}
+  </div>
+
+</article>

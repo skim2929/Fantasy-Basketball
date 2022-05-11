@@ -1,0 +1,19 @@
+<article>
+  <div class="container">
+    <div class="row align-items-center">
+      <h2 class="text header-titles">{{title}}</h2>
+      {{#if msg}}
+        <h3 id="error-not-found" class="text">{{msg}}</h3>
+      {{/if}}
+    </div>
+    <div class="row align-items-center">
+      <form method="POST" action="/searchplayers" class="header-titles">
+        <label class="label" for="search">
+          Enter a player name:
+          <input type="text" id="search" name="playerSearchTerm" />
+        </label>
+        <button class="button" type="submit">search</button>
+      </form>
+    </div>
+  </div>
+</article>

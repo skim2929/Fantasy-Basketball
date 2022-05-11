@@ -1,0 +1,53 @@
+<article>
+  <h2 class="header-titles">{{title}}</h2>
+  <div class="container">
+    <h3>Passing Yards</h3>
+    {{#if passingYards}}
+      <ul>
+        {{#each passingYards}}
+          <li><p>{{this}}</p></li>
+        {{/each}}
+      </ul>
+    {{/if}}
+    <h3>Rushing Yards</h3>
+    {{#if rushingYards}}
+      <ul>
+        {{#each rushingYards}}
+          <li><p>{{this}}</p></li>
+        {{/each}}
+      </ul>
+    {{/if}}
+    <h3>Receiving Yards</h3>
+    {{#if receivingYards}}
+      <ul>
+        {{#each receivingYards}}
+          <li><p>{{this}}</p></li>
+        {{/each}}
+      </ul>
+    {{/if}}
+    <h3>Sacks</h3>
+    {{#if sacks}}
+      <ul>
+        {{#each sacks}}
+          <li><p>{{this}}</p></li>
+        {{/each}}
+      </ul>
+    {{/if}}
+    <h3>Passing Touchdowns</h3>
+    {{#if passingTouchdowns}}
+      <ul>
+        {{#each passingTouchdowns}}
+          <li><p>{{this}}</p></li>
+        {{/each}}
+      </ul>
+    {{/if}}
+    <h3>Quarterback Rating</h3>
+    {{#if quarterbackRating}}
+      <ul>
+        {{#each quarterbackRating}}
+          <li><p>{{this}}</p></li>
+        {{/each}}
+      </ul>
+    {{/if}}
+  </div>
+</article>
